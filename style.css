@@ -6,166 +6,185 @@
   user-select: none;
 }
 
-body {
-  background-color: #1E1E1E;
-  color: #FFF;
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+}
+
+/* Video Background Wrapper */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* UI Container */
+.menu-container {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-}
-
-/* Top Bar */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  background-color: #111;
-  border-bottom: 2px solid #333;
-  font-size: 14px;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 40px 20px 20px 20px;
 }
 
-.top-title {
-  font-size: 16px;
+/* Logo Box Style Awal */
+.logo-box {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mc-title {
+  font-size: 52px;
+  color: #DDD;
+  text-shadow: 4px 4px 0px #3F3F3F, 6px 6px 0px #000;
+  letter-spacing: 4px;
+}
+
+.mc-subtitle {
+  display: block;
+  font-size: 22px;
+  color: #FFF;
+  text-shadow: 3px 3px 0px #3F3F3F, 4px 4px 0px #000;
+  margin-top: -5px;
   letter-spacing: 2px;
 }
 
-.top-right {
-  font-size: 10px;
-  color: #AAA;
-}
-
-/* Tabs Bar */
-.tabs-bar {
-  display: flex;
-  background-color: #2D2D2D;
-  border-bottom: 2px solid #000;
-}
-
-.tab {
-  padding: 12px 24px;
-  font-size: 11px;
-  color: #888;
-  cursor: pointer;
-  border-right: 2px solid #1E1E1E;
-}
-
-.tab.active {
-  background-color: #4A4A4A;
-  color: #FFF;
-  border-bottom: 3px solid #55FF55;
-}
-
-/* Action Bar */
-.action-bar {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.btn-create {
-  background-color: #388E3C;
-  color: #FFF;
-  border: 2px solid #000;
-  border-top-color: #66BB6A;
-  border-left-color: #66BB6A;
-  padding: 10px 16px;
-  font-size: 10px;
-  cursor: pointer;
-  box-shadow: inset -2px -2px 0px #1B5E20;
-}
-
-.btn-create:hover {
-  background-color: #4CAF50;
-}
-
-/* World Grid Layout */
-.world-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 15px;
-  padding: 0 20px 80px 20px;
-  overflow-y: auto;
-}
-
-.world-card {
-  background-color: #333;
-  border: 2px solid #000;
-  text-decoration: none;
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.1s ease, border-color 0.1s ease;
-}
-
-.world-card:hover {
-  border-color: #FFF;
-  transform: scale(1.02);
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  display: block;
-}
-
-.world-info {
-  padding: 10px;
-  background-color: #4A4A4A;
-  border-top: 2px solid #000;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.world-info h3 {
-  font-size: 11px;
+/* Splash Text Kuning Goyang */
+.splash-text {
+  position: absolute;
+  right: -30px;
+  bottom: -15px;
+  color: #FFFF55;
+  font-size: 16px;
+  text-shadow: 2px 2px 0px #3F3F00, 3px 3px 0px #000;
+  transform: rotate(-15deg);
+  animation: splashBounce 0.5s infinite alternate ease-in-out;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* Tag Status Game Mode */
-.mode-tag {
-  display: inline-block;
-  font-size: 8px;
-  padding: 3px 5px;
-  width: fit-content;
-  border-radius: 2px;
+@keyframes splashBounce {
+  0% { transform: rotate(-15deg) scale(1); }
+  100% { transform: rotate(-15deg) scale(1.08); }
 }
 
-.survival { background-color: #2E7D32; }
-.creative { background-color: #1565C0; }
-.experimental { background-color: #F57F17; color: #000; }
-
-/* Bottom Bar & Back Button */
-.bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+/* Button Group Style */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
+  max-width: 420px;
+  margin-bottom: 60px;
 }
 
-.btn-back {
+.button-row {
   display: flex;
-  align-items: center;
   gap: 8px;
-  color: #FFF;
-  text-decoration: none;
-  font-size: 11px;
+  width: 100%;
 }
 
-.btn-icon {
-  background-color: #D32F2F;
+.mc-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 42px;
+  background: #737373;
+  border: 2px solid #000;
+  border-top-color: #ACACAC;
+  border-left-color: #ACACAC;
+  border-bottom-color: #3B3B3B;
+  border-right-color: #3B3B3B;
+  color: #E0E0E0;
+  text-decoration: none;
+  font-size: 14px;
+  text-shadow: 2px 2px 0px #000;
+  box-shadow: inset -2px -2px 0px #373737, inset 2px 2px 0px #DBDBDB;
+  cursor: pointer;
+}
+
+.mc-button:hover {
+  background: #7084D8;
+  border-top-color: #A3B2F0;
+  border-left-color: #A3B2F0;
+  border-bottom-color: #39478A;
+  border-right-color: #39478A;
+  color: #FFFFA0;
+  box-shadow: inset -2px -2px 0px #2D3A72, inset 2px 2px 0px #DCE2FD;
+}
+
+.mc-button:active {
+  border-top-color: #3B3B3B;
+  border-left-color: #3B3B3B;
+  border-bottom-color: #ACACAC;
+  border-right-color: #ACACAC;
+}
+
+.half-btn { flex: 1; }
+.icon-btn { width: 42px; font-size: 16px; }
+
+.mc-button-realms { position: relative; }
+.realms-icons {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #55FF55;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #55FF55;
+}
+
+/* Footer Style */
+.footer-left, .footer-right {
+  position: absolute;
+  bottom: 10px;
+  font-size: 10px;
   color: #FFF;
-  padding: 4px 7px;
-  border-radius: 3px;
-  font-size: 9px;
-  border: 1px solid #000;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.footer-left { left: 10px; }
+.footer-right { right: 10px; }
+
+/* Responsive HP */
+@media (max-width: 600px) {
+  .mc-title { font-size: 32px; }
+  .mc-subtitle { font-size: 14px; }
+  .splash-text { font-size: 12px; right: -10px; }
+  .button-group { max-width: 300px; }
+  .mc-button { font-size: 11px; height: 38px; }
+  .footer-left, .footer-right { font-size: 8px; }
 }
