@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Idoo Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font gaya piksel ala Minecraft -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Video Looping -->
+  <video autoplay muted loop id="bg-video">
+    <source src="back.mp4" type="video/mp4">
+    Browser lo tidak mendukung video tag.
+  </video>
+
+  <!-- Overlay hitam tipis biar UI lebih kontras -->
+  <div class="overlay"></div>
+
+  <!-- Container Utama Menu Minecraft -->
+  <div class="menu-container">
+    
+    <!-- Logo Section -->
+    <div class="logo-box">
+      <h1 class="mc-title">MINECRAFT</h1>
+      <span class="mc-subtitle">IDOO EDITION</span>
+      <div class="splash-text">oi oi oi baka!!!</div>
+    </div>
+
+    <!-- Tombol Menu Utama -->
+    <div class="button-group">
+      <a href="#mulai" class="mc-button">Mulai</a>
+      <a href="#projek" class="mc-button">Projek</a>
+      <a href="#profil" class="mc-button mc-button-realms">
+        Profil
+        <span class="realms-icons">
+          <span class="dot"></span>
+          <span class="map-icon">📄</span>
+        </span>
+      </a>
+
+      <!-- Baris Tombol Bawah (Options & Quit Game) -->
+      <div class="button-row">
+        <a href="#lang" class="mc-button icon-btn">🌐</a>
+        <a href="#options" class="mc-button half-btn">Options...</a>
+        <a href="#quit" class="mc-button half-btn">Quit Game</a>
+        <a href="#accessibility" class="mc-button icon-btn">🧍</a>
+      </div>
+    </div>
+
+    <!-- Footer Text -->
+    <div class="footer-left">Minecraft 1.20.5</div>
+    <div class="footer-right">Copyright Mojang AB. Do not distribute!</div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* Reset Basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace;
+    user-select: none;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: white;
+  }
+  
+  /* Background Video Styling */
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    object-fit: cover;
+    filter: blur(1px) brightness(0.85); /* Agak di-blur & dimming dikit biar estetik */
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+  }
+  
+  /* Container UI */
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 40px 20px 20px 20px;
+  }
+  
+  /* Logo Section */
+  .logo-box {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .mc-title {
+    font-size: 52px;
+    color: #DDD;
+    text-shadow: 4px 4px 0px #3F3F3F, 6px 6px 0px #000;
+    letter-spacing: 4px;
+  }
+  
+  .mc-subtitle {
+    display: block;
+    font-size: 22px;
+    color: #FFF;
+    text-shadow: 3px 3px 0px #3F3F3F, 4px 4px 0px #000;
+    margin-top: -5px;
+    letter-spacing: 2px;
+  }
+  
+  /* Splash Text Animasi (Kuning goyang-goyang) */
+  .splash-text {
+    position: absolute;
+    right: -30px;
+    bottom: -15px;
+    color: #FFFF55;
+    font-size: 16px;
+    text-shadow: 2px 2px 0px #3F3F00, 3px 3px 0px #000;
+    transform: rotate(-15deg);
+    animation: splashBounce 0.5s infinite alternate ease-in-out;
+    white-space: nowrap;
+  }
+  
+  @keyframes splashBounce {
+    0% { transform: rotate(-15deg) scale(1); }
+    100% { transform: rotate(-15deg) scale(1.08); }
+  }
+  
+  /* Group Button Menu */
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 60px;
+  }
+  
+  .button-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  /* Minecraft Button Style */
+  .mc-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    background: #737373;
+    border: 2px solid #000;
+    border-top-color: #ACACAC;
+    border-left-color: #ACACAC;
+    border-bottom-color: #3B3B3B;
+    border-right-color: #3B3B3B;
+    color: #E0E0E0;
+    text-decoration: none;
+    font-size: 14px;
+    text-shadow: 2px 2px 0px #000;
+    box-shadow: inset -2px -2px 0px #373737, inset 2px 2px 0px #DBDBDB;
+    cursor: pointer;
+  }
+  
+  .mc-button:hover {
+    background: #7084D8;
+    border-top-color: #A3B2F0;
+    border-left-color: #A3B2F0;
+    border-bottom-color: #39478A;
+    border-right-color: #39478A;
+    color: #FFFFA0;
+    box-shadow: inset -2px -2px 0px #2D3A72, inset 2px 2px 0px #DCE2FD;
+  }
+  
+  .mc-button:active {
+    border-top-color: #3B3B3B;
+    border-left-color: #3B3B3B;
+    border-bottom-color: #ACACAC;
+    border-right-color: #ACACAC;
+  }
+  
+  .half-btn {
+    flex: 1;
+  }
+  
+  .icon-btn {
+    width: 42px;
+    font-size: 16px;
+  }
+  
+  /* Icon kecil khusus button Profil/Realms */
+  .mc-button-realms {
+    position: relative;
+  }
+  
+  .realms-icons {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #55FF55;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #55FF55;
+  }
+  
+  /* Footer Style */
+  .footer-left, .footer-right {
+    position: absolute;
+    bottom: 10px;
+    font-size: 10px;
+    color: #FFF;
+    text-shadow: 2px 2px 0px #000;
+  }
+  
+  .footer-left {
+    left: 10px;
+  }
+  
+  .footer-right {
+    right: 10px;
+  }
+  
+  /* Responsive buat HP/Layar Kecil */
+  @media (max-width: 600px) {
+    .mc-title { font-size: 32px; }
+    .mc-subtitle { font-size: 14px; }
+    .splash-text { font-size: 12px; right: -10px; }
+    .button-group { max-width: 300px; }
+    .mc-button { font-size: 11px; height: 38px; }
+    .footer-left, .footer-right { font-size: 8px; }
+  }
