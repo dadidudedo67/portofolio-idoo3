@@ -3,56 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio - Idoo Edition</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Minecraft - Select World</title>
+  <link rel="stylesheet" href="style-play.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Container Video Background -->
-  <div class="video-background">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="menkrep.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
+  <!-- Top Bar / Navigation -->
+  <header class="top-bar">
+    <div class="top-title">PLAY</div>
+    <div class="top-right">Friends (0)</div>
+  </header>
+
+  <!-- Sub Header Tabs -->
+  <div class="tabs-bar">
+    <div class="tab active">Worlds (8)</div>
+    <div class="tab">Realms</div>
+    <div class="tab">Servers</div>
   </div>
 
-  <!-- Main Menu UI -->
-  <div class="menu-container">
-    
-    <!-- Logo Section Style Awal -->
-    <div class="logo-box">
-      <h1 class="mc-title">MINECRAFT</h1>
-      <span class="mc-subtitle">IDOO EDITION</span>
-      <div class="splash-text">oi oi oi baka!!!</div>
-    </div>
+  <!-- Action Bar -->
+  <div class="action-bar">
+    <button class="btn-create">+ Create New World</button>
+  </div>
 
-    <!-- Group Button Menu -->
-    <div class="button-group">
-      <a href="#mulai" class="mc-button">Mulai</a>
-      <a href="#projek" class="mc-button">Projek</a>
-      <a href="#profil" class="mc-button mc-button-realms">
-        Profil
-        <span class="realms-icons">
-          <span class="dot"></span>
-          <span class="map-icon">📄</span>
-        </span>
-      </a>
+  <!-- Grid World List (Tempat Project Lo) -->
+  <main class="world-grid">
 
-      <!-- Baris Tombol Bawah -->
-      <div class="button-row">
-        <a href="#lang" class="mc-button icon-btn">🌐</a>
-        <a href="#options" class="mc-button half-btn">Options...</a>
-        <a href="#quit" class="mc-button half-btn">Quit Game</a>
-        <a href="#accessibility" class="mc-button icon-btn">🧍</a>
+    <!-- Card Project 1 -->
+    <a href="https://github.com/username/project1" target="_blank" class="world-card">
+      <div class="thumbnail">
+        <img src="https://via.placeholder.com/300x180/333/fff?text=Project+1" alt="World Preview">
       </div>
-    </div>
+      <div class="world-info">
+        <h3>Web E-Commerce</h3>
+        <span class="mode-tag survival">Survival</span>
+      </div>
+    </a>
 
-    <!-- Footer Text Versi Terbaru -->
-    <div class="footer-left">Minecraft 1.30.22</div>
-    <div class="footer-right">Copyright Mojang AB. Do not distribute!</div>
+    <!-- Card Project 2 -->
+    <a href="https://github.com/username/project2" target="_blank" class="world-card">
+      <div class="thumbnail">
+        <img src="https://via.placeholder.com/300x180/444/fff?text=Project+2" alt="World Preview">
+      </div>
+      <div class="world-info">
+        <h3>Bot Discord JS</h3>
+        <span class="mode-tag creative">Creative</span>
+      </div>
+    </a>
 
-  </div>
+    <!-- Card Project 3 -->
+    <a href="https://github.com/username/project3" target="_blank" class="world-card">
+      <div class="thumbnail">
+        <img src="https://via.placeholder.com/300x180/555/fff?text=Project+3" alt="World Preview">
+      </div>
+      <div class="world-info">
+        <h3>Portfolio Mobile App</h3>
+        <span class="mode-tag experimental">Experimental</span>
+      </div>
+    </a>
+
+    <!-- Card Project 4 -->
+    <a href="https://github.com/username/project4" target="_blank" class="world-card">
+      <div class="thumbnail">
+        <img src="https://via.placeholder.com/300x180/222/fff?text=Project+4" alt="World Preview">
+      </div>
+      <div class="world-info">
+        <h3>Python AI Script</h3>
+        <span class="mode-tag survival">Survival</span>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- Bottom Bar & Tombol Back -->
+  <footer class="bottom-bar">
+    <a href="index.html" class="btn-back">
+      <span class="btn-icon">B</span> Back
+    </a>
+  </footer>
 
 </body>
 </html>
